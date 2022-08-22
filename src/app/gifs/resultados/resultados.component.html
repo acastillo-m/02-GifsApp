@@ -1,3 +1,25 @@
-<div class="col">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus veritatis voluptates officiis? Alias omnis ducimus molestiae voluptatum dolorem? Quaerat dolor veniam impedit id sit error vero doloremque autem sed natus!
+<!-- <ul>
+    <li *ngFor="let iresultados of resultados"> 
+        {{iresultados.title}}
+    </li>
+</ul> -->
+
+<div class="row">
+    <div *ngFor="let iresultados of resultados" 
+          class="col-lg-3 col-md-4 col-sm-6 col-xs-12"
+          class="animate__animated animate__fadeIn">
+
+        <div class="card">
+            <img  [src]="iresultados.images.downsized_medium.url" 
+                  [alt]="iresultados.title"
+                  class="card-img-top">
+            <div class="card-body">
+                <p class="card-text">
+                    <!-- <img [src]="iresultados.user.avatar_url " [alt]="iresultados.user.username" height="40vmin"> -->
+                    {{iresultados.title}}
+                </p>
+            </div>
+        </div>
+
+    </div>
 </div>

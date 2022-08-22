@@ -18,6 +18,10 @@ export class SidebarComponent{
   ) 
   { }
 
+  buscar(termino: string){
+    this.busquedaService.bucarGifs(termino);
+  }
+
 
 
 
